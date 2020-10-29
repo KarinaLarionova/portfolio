@@ -35,6 +35,7 @@ html, body {
 
 a, a:hover {
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul {
@@ -80,10 +81,12 @@ button {
     z-index: 2;
     opacity: 0;
     transition: 0.5s;
+    display: none;
 }
 
 #overlay.active{
     opacity: 0.5;
+    display: block;
 }
 
 .container {
