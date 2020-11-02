@@ -155,3 +155,61 @@ button {
 .animate-border:hover::after {
     width: 55%;
 }
+
+//красное подчеркивание
+/*.animate-border-2 {
+    position: relative;
+    width: fit-content;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        height: 4px;
+        background-color: var(--red);
+        width: 0%;
+        transition: 0.5s;
+        z-index: -1;
+    }
+    &::before {
+        left: 50%;
+    }
+    &::after {
+        right: 50%;
+    }
+}
+
+.animate-border-2:hover::before,
+.animate-border-2:hover::after {
+    width: 55%;
+}*/
+
+.fa-linkedin-in {
+    transition: 0.3s;
+    &:hover {
+    color: #0077b5;
+    }
+    &:active {
+        color: #0077b5;
+        }
+}
+
+.fa-vk {
+    transition: 0.3s;
+    &:hover {
+    color: #45668e;
+    }
+    &:active {
+        color: #45668e;
+        }
+}
+
+.fa-github {
+    transition: 0.3s;
+    &:hover {
+        color: #6cc644;
+    }
+    &:active {
+        color: #6cc644;
+    }
+}

@@ -1,0 +1,160 @@
+.timeline {
+  padding-top: 136px;
+  padding-bottom: 145px;
+}
+
+.timeline .header-3 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 145px;
+}
+
+.timeline .line-bottom {
+  &::after {
+    bottom: 16px;
+    height: 14px;
+  }
+}
+
+.timeline-line {
+  width: 1105px;
+  margin-right: auto;
+  margin-right: auto;
+}
+
+.timeline-item {
+  position: relative;
+  min-height: 160px;
+  padding-left: 100px;
+  margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    width: 3px;
+    background-color: #e1eef4;
+    position: absolute;
+    top: 95px;
+    bottom: 0;
+    left: 37px;
+  }
+  &:last-child::after {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+    &:nth-child(2n + 1) {
+      text-align: right;
+      padding-left: 0;
+      padding-right: 100px;
+    }
+    &:first-child::before {
+      content: "";
+      width: 3px;
+      background-color: #e1eef4;
+      position: absolute;
+      right: 0;
+      top: -80px;
+      height: 60px;
+    }
+  }
+}
+
+.timeline-item:nth-child(2n+1) .heading {
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+}
+
+.timeline-item:nth-child(2n) .timeline-icon {
+  @media (min-width: 768px) {
+    left: -37px;
+  }
+}
+.timeline-item:nth-child(2n)::after {
+  @media (min-width: 768px) {
+    left: 0;
+  }
+}
+
+.timeline-item:nth-child(2n + 1) .timeline-icon {
+  @media (min-width: 768px) {
+    left: auto;
+    right: -37px;
+  }
+}
+
+.timeline-item:nth-child(2n + 1)::after {
+  @media (min-width: 768px) {
+    left: auto;
+    right: 0;
+  }
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 74px;
+  border-radius: 28px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+  }
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 800;
+  position: relative;
+}
+
+.timeline-text .line-bottom::after {
+  height: 8px;
+  bottom: 6px;
+}
+
+.timeline-text {
+  width: 425px;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.timeline-text-time {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.icon-1 {
+  fill: #ffcf8f;
+}
+
+.icon-2 {
+  fill: #ff5b5b;
+}
+
+.icon-3 {
+  fill: #ac74ee;
+}
+
+.icon-4 {
+  fill: #51e5cb;
+}
+
+.icon-5 {
+  fill: #7cc0ff;
+}

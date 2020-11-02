@@ -87,6 +87,9 @@
   font-weight: 700;
   color: #000000;
 
+  &:hover {
+  }
+
   @media (min-width: 1200px) {
     display: inline-block;
     //padding-top: 5px;
@@ -121,6 +124,7 @@
   @media (min-width: 1200px) {
     display: inline-block;
     width: 35px;
+    color: black;
 
     & + .header-social_item {
       margin-left: 15px;
@@ -215,7 +219,7 @@
   @media (min-width: 1200px) {
     margin-bottom: 0;
     width: 462px;
-    height: 428px;
+    height: 510px;
   }
 }
 
@@ -234,6 +238,13 @@
   }
 }
 
+.name .line-bottom {
+  &::after {
+    bottom: 19px;
+    height: 18px;
+  }
+}
+
 .introduce-text {
   font-size: 18px;
   font-weight: 500;
@@ -247,7 +258,7 @@
 
 .button-row {
   display: none;
-  .introduce-button {
+  .button-1 {
     margin-right: 20px;
   }
   @media (min-width: 1200px) {
@@ -255,34 +266,51 @@
   }
 }
 
-.introduce-button {
+.button-1 {
   display: none;
   border-radius: 50px;
   background-color: var(--yellow);
   font-size: 22px;
   font-weight: 700;
-  padding-top: 18px;
-  padding-bottom: 20px;
+  line-height: 2.9;
+  height: 64px;
   width: 254px;
   color: var(--text);
   text-align: center;
   cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: #ffd200;
+  }
+  &:active {
+    background-color: #e1bc10;
+  }
   @media (min-width: 1200px) {
     display: block;
   }
 }
 
-.introduce-contacts {
+.button-2 {
   display: block;
   width: 185px;
   border-radius: 50px;
   background-color: #fff;
   font-size: 22px;
   font-weight: 700;
-  padding-top: 16px;
-  padding-bottom: 18px;
+  line-height: 2.54;
+  height: 64px;
   text-align: center;
-  border: 2px solid #464646;
+  border: 4px solid #464646;
+  color: #464646;
+  transition: 0.3s;
+  &:hover {
+    border: 4px solid #797979;
+    color: #797979;
+  }
+  &:active {
+    border: 4px solid #181818;
+    color: #181818;
+  }
 }
 
 .block {
@@ -342,7 +370,7 @@
   }
 }
 
-.skill_content_header {
+.header-2 {
   margin-bottom: 28px;
   font-size: 30px;
   font-weight: 800;
@@ -356,7 +384,7 @@
   margin-bottom: 45px;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.5;
   @media (min-width: 1200px) {
     font-size: 24px;
   }
@@ -370,7 +398,7 @@
 }
 
 .skill_content_item::before {
-  content: "- ";
+  content: "\2014";
 }
 
 .social-icon-block {
@@ -395,6 +423,13 @@
   border-radius: 50%;
   color: #fff;
   background-color: #039be5;
+  transition: 0.3s;
+  &:hover {
+    background-color: #45aaee;
+  }
+  &:active {
+    background-color: #127db3;
+  }
   svg {
     margin-top: 9px;
     margin-left: 9px;
@@ -409,6 +444,13 @@
   border-radius: 50%;
   background-color: #4d76a1;
   color: #fff;
+  transition: 0.3s;
+  &:hover {
+    background-color: #548bdd;
+  }
+  &:active {
+    background-color: #3864c2;
+  }
   svg {
     margin-top: 8px;
     margin-left: 6px;
@@ -423,6 +465,13 @@
   border-radius: 50%;
   background-color: #3b5998;
   color: #fff;
+  transition: 0.3s;
+  &:hover {
+    background-color: #5594cf;
+  }
+  &:active {
+    background-color: #244283;
+  }
   svg {
     margin-top: 8px;
     margin-left: 12px;
@@ -436,9 +485,15 @@
   margin-top: 25px;
   color: #000000;
   text-decoration: underline;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  @media (min-width: 1200px) {
-    display: none;
+  transition: 0.3s;
+  &:hover {
+    color: #039be5;
+    text-decoration: underline;
+  }
+  &:active {
+    color: #ea655f;
+    text-decoration: underline;
   }
 }
