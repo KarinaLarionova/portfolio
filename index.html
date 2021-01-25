@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./src/mplus1p/mplus1p.css">
+    <link rel="shortcut icon" href="./img/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <ul id="page-nav">
+        <li class="active">
+            <a href="#header"></a>
+        </li>
+        <li>
+            <a href="#portfolio"></a>
+        </li>
+        <li>
+            <a href="#homwork"></a>
+        </li>
+        <li>
+            <a href="#contacts"></a>
+        </li>
+    </ul>
+
     <div id="overlay"></div>
-    <header class="header">
+    <header class="header" id="header">
         <div class="fix-menu">
             <div class="header-top">
                 <a href="#" class="logo line-bottom">КЛ</a>
@@ -70,7 +86,7 @@
             </div>
             <div class="block"></div>
         </section>
-        <div class="header-img">
+        <div class="header_img-wrapper">
             <img src="./img/header/bg-img.png" alt="header-img" class="header_img">
         </div>
         <div class="container">
@@ -108,18 +124,20 @@
         </div>
     </header>
     <main>
-        <div class="container">
-        <section class="portfolio">
+        
+        <section class="portfolio" id="portfolio">
+            <div class="container">
             <h2 class="header-3 line-bottom">Портфолио</h2>
             <div class="portfolio__filter">
-                <a href="#" class="portfolio__filter-title">Все работы</a>
-                <a href="#" class="portfolio__filter-title">Вootstrap</a>
-                <a href="#" class="portfolio__filter-title">WordPress</a>
-                <a href="#" class="portfolio__filter-title">Frontend</a>
+                <button href="#" class="portfolio__filter-title control-active" data-filter="all">Все работы</button>
+                <button href="#" class="portfolio__filter-title" data-filter=".boots">Вootstrap</button>
+                <button href="#" class="portfolio__filter-title" data-filter=".wp">WordPress</button>
+                <button href="#" class="portfolio__filter-title" data-filter=".frontend">Frontend</button>
             </div>
            
-            <div class="project-first-row">
-                <div class="project-card">
+            <div class="project-row" id="portfolio-projects">
+                
+                <div class="project-card mix">
                     <a href="#" class="project-card__poster">
                         <button>Подробнее</button>
                         <img src="img/works/work-1.jpg" alt="img">
@@ -129,7 +147,7 @@
                         <p class="project-card_content">Верстка многостраничного сайта.</p>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card mix">
                     <a href="#" class="project-card__poster">
                         <button>Подробнее</button>
                         <img src="img/works/work-2.jpg" alt="img">
@@ -139,10 +157,8 @@
                         <p class="project-card_content">Верстка лендинга.</p>
                     </div>
                 </div>
-            <!--</div>-->
 
-            <!--<div class="project-second-row">-->
-                <div class="project-card-small">
+                <div class="project-card-small mix">
                     <a href="#" class="project-card__poster">
                         <button>Подробнее</button>
                         <img src="img/works/work-3.jpg" alt="img">
@@ -152,7 +168,7 @@
                         <p class="project-card_content">Верстка многостраничного сайта.</p>
                     </div>
                 </div>
-                <div class="project-card-small">
+                <div class="project-card-small mix">
                     <a href="#" class="project-card__poster">
                         <button>Подробнее</button>
                         <img src="img/works/work-4.jpg" alt="img">
@@ -162,7 +178,7 @@
                         <p class="project-card_content">Верстка многостраничного сайта.</p>
                     </div>
                 </div>
-                <div class="project-card-small">
+                <div class="project-card-small mix">
                     <a href="#" class="project-card__poster">
                         <button>Подробнее</button>
                         <img src="img/works/work-5.jpg" alt="img">
@@ -172,13 +188,14 @@
                         <p class="project-card_content">Верстка многостраничного сайта.</p>
                     </div>
                 </div>
+            
             </div>
-        
+            </div>
         </section>
-        </div>
+       
 
         <div class="container">
-            <section class="timeline">
+            <section class="timeline" id="homwork">
                 <h2 class="header-3 line-bottom">Как я работаю</h2>
                 <div class="timeline-line">
                     <div class="timeline-item">
@@ -231,11 +248,53 @@
                 </div>
             </section>
         </div>
+
+            <section class="contacts" id="contacts">
+                <div class="container">
+                    <h2 class="header-3 line-bottom">Контакты</h2>
+
+                    <div class="contacts__form">
+                        <form class="contact-form" id="contact-form">
+                            <input type="hidden" name="project_name" value="portfolio.ru">
+                            <input type="hidden" name="admin_email" value="karina.davytova@gmail.com">
+                            <input type="hidden" name="email_from" value="info@portfolio.ru">
+
+                            <div class="form-item">
+                                <input class="form-field" type="text" name="userName">
+                                <span class="fake-placeholder">Ваше имя</span>
+                            </div>
+                            <div class="form-item">
+                                <input class="form-field" type="text" name="email">
+                                <span class="fake-placeholder">Ваш email</span>
+                            </div>
+                            <div class="form-item">
+                                <textarea class="form-field" name="message"></textarea>
+                                <span class="fake-placeholder">Текст сообщения</span>
+                            </div>
+                            <div class="form-item">
+                                <input class="button-1" type="submit" value="Отправить">
+                            </div>
+                        </form>
+                        <div id="answer"></div>
+                    </div>
+                </div>
+            </section>
+       
     </main>
 
-    
+    <footer>
+
+    </footer>
+    <div id="backTop">
+        <a href="#top">
+            <svg data-icon="angle-double-up" class="svg-inline--fa fa-angle-double-up fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M177 255.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 351.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 425.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1zm-34-192L7 199.7c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l96.4-96.4 96.4 96.4c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9l-136-136c-9.2-9.4-24.4-9.4-33.8 0z"></path></svg>
+        </a>
+    </div>
 
     <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./libs/mixit-up-3/mixitup.min.js"></script>
+    <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+    <script src="./libs/nav.js/nav.js"></script>
 </body>
 </html>

@@ -207,13 +207,46 @@ button {
 .fa-github:active {
   color: #6cc644;
 }
+#page-nav {
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  z-index: 100;
+}
+#page-nav li {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: 0.5s;
+}
+#page-nav li a {
+  display: block;
+  height: 100%;
+}
+#page-nav li.active {
+  background-color: green;
+}
+.fa-angle-double-up {
+  color: red;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 40px;
+  width: 30px;
+  height: 30px;
+}
+.fa-angle-double-up:hover {
+  opacity: 0.8;
+}
 .header {
   max-width: 320px;
   padding-top: 70px;
   padding-bottom: 235px;
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 @media (min-width: 1200px) {
   .header {
@@ -252,8 +285,12 @@ button {
 }
 .logo {
   font-size: 42px;
-  font-weight: 800;
+  font-weight: 900;
   color: #000000;
+  transition: 0.3s;
+}
+.logo:hover {
+  color: #333333;
 }
 .header-menu {
   position: fixed;
@@ -287,6 +324,10 @@ button {
   font-size: 20px;
   font-weight: 700;
   color: #000000;
+  transition: 0.3s;
+}
+.header-menu_item:hover {
+  color: #333333;
 }
 @media (min-width: 1200px) {
   .header-menu_item {
@@ -301,7 +342,8 @@ button {
 }
 @media (min-width: 1200px) {
   .header-social {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }
 .mobile-contacts {
@@ -321,12 +363,16 @@ button {
 @media (min-width: 1200px) {
   .header-social_item {
     display: inline-block;
-    width: 35px;
+    width: 30px;
     color: black;
   }
   .header-social_item + .header-social_item {
-    margin-left: 15px;
+    margin-left: 19px;
   }
+}
+.fa-vk {
+  padding-top: 6px;
+  width: 34px;
 }
 .toggle-menu {
   position: relative;
@@ -465,6 +511,7 @@ button {
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 5;
 }
 .button-1:hover {
   background-color: #ffd200;
@@ -490,6 +537,7 @@ button {
   border: 4px solid #464646;
   color: #464646;
   transition: 0.3s;
+  z-index: 5;
 }
 .button-2:hover {
   border: 4px solid #797979;
@@ -516,13 +564,33 @@ button {
     display: block;
   }
 }
+.header_img-wrapper {
+  margin-bottom: 74px;
+  transform: scale(1.8);
+  margin-top: 43px;
+}
+@media (min-width: 425px) {
+  .header_img-wrapper {
+    transform: scale(1.5);
+  }
+}
+@media (min-width: 576px) {
+  .header_img-wrapper {
+    transform: scale(1.2);
+  }
+}
+@media (min-width: 768px) {
+  .header_img-wrapper {
+    transform: scale(1);
+  }
+}
 .header_img {
   margin-top: -46px;
   margin-bottom: 40px;
 }
 @media (min-width: 1200px) {
   .header_img {
-    margin-top: -80px;
+    margin-top: -130px;
     margin-bottom: 0;
   }
 }
@@ -668,11 +736,14 @@ button {
   text-decoration: underline;
 }
 .portfolio {
-  margin-top: 1200px;
-  margin-bottom: 100px;
+  padding-top: 110px;
   padding-bottom: 120px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f8f9;
 }
-.project-first-row {
+.project-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -742,7 +813,7 @@ button {
 }
 .project-card__poster:hover button {
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 25px #000000;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 .header-3 {
   font-size: 64px;
@@ -793,15 +864,10 @@ button {
   font-size: 22px;
   font-weight: 400;
 }
-.project-second-row {
-  display: flex;
-  justify-content: space-between;
-}
 .project-card-small {
   position: relative;
   display: block;
   max-width: 360px;
-  height: 245px;
 }
 .project-card_header--small {
   font-size: 26px;
@@ -818,8 +884,17 @@ button {
   text-decoration: underline;
 }
 .timeline {
-  padding-top: 136px;
+  padding-top: 130px;
   padding-bottom: 145px;
+}
+@media (min-width: 1200px) {
+  .timeline {
+    max-width: 1600px;
+    background-image: url(../img/contacts/line-bg-2.jpg);
+    background-size: auto;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+  }
 }
 .timeline .header-3 {
   margin-left: auto;
@@ -954,4 +1029,57 @@ button {
 }
 .icon-5 {
   fill: #7cc0ff;
+}
+.contacts {
+  background-color: #f4f8f9;
+  width: 100%;
+}
+.contacts .line-bottom {
+  margin-left: auto;
+  margin-right: auto;
+}
+.contacts .line-bottom::after {
+  bottom: 16px;
+  height: 14px;
+}
+.form-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+.form-item .button-1 {
+  height: 67px;
+  width: 200px;
+}
+.form-field {
+  width: 100%;
+  height: 50px;
+  border: 0px;
+  border-bottom: 1px solid grey;
+  font-size: 18px;
+  padding-left: 12px;
+  padding-right: 12px;
+  outline: none;
+}
+textarea.form-field {
+  height: 100px;
+  resize: none;
+}
+.fake-placeholder {
+  position: absolute;
+  pointer-events: none;
+  left: 12px;
+  top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.fake-placeholder.active {
+  color: #ed9626;
+  font-size: 16px;
+  font-weight: 700;
+  top: -20px;
+}
+.error {
+  font-size: 14px;
+  color: var(--red);
 }
