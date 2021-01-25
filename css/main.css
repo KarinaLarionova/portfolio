@@ -180,13 +180,13 @@ button {
 .animate-border-2:hover::after {
     width: 55%;
 }*/
-.fa-linkedin-in {
+.fa-telegram-plane {
   transition: 0.3s;
 }
-.fa-linkedin-in:hover {
+.fa-telegram-plane:hover {
   color: #0077b5;
 }
-.fa-linkedin-in:active {
+.fa-telegram-plane:active {
   color: #0077b5;
 }
 .fa-vk {
@@ -229,7 +229,7 @@ button {
   background-color: green;
 }
 .fa-angle-double-up {
-  color: red;
+  color: #8b8b8b;
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -263,6 +263,7 @@ button {
   left: 0;
   right: 0;
   z-index: 50;
+  max-width: 100%;
 }
 .fix-menu.active {
   background-color: #fff;
@@ -831,7 +832,7 @@ button {
 .portfolio__filter-title {
   display: block;
   margin-right: 65px;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   color: #beccd1;
   transition: 0.3s;
@@ -1082,4 +1083,61 @@ textarea.form-field {
 .error {
   font-size: 14px;
   color: var(--red);
+}
+.contacts-block {
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  width: 555px;
+}
+.info__text {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.info__contacts-head {
+  font-size: 20px;
+  font-weight: 700;
+}
+.info__contacts-content {
+  margin-left: 94px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.info__contacts-content li {
+  line-height: 1.5;
+}
+.contacts__form {
+  margin-bottom: 130px;
+  padding: 60px 45px;
+  width: 510px;
+  box-shadow: -15px -15px 30px #dfecf3;
+}
+.info__contacts {
+  margin-bottom: 44px;
+  display: flex;
+}
+.info__contacts-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.footer {
+  font-family: M PLUS 1p;
+  padding-top: 28px;
+  padding-bottom: 38px;
+  background-color: #333333;
+}
+.footer__info-heading {
+  margin-bottom: 20px;
+  color: #a7a7a7;
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer__info-content {
+  color: #aaaaaa;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3.2px;
 }

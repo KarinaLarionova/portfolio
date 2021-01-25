@@ -1,0 +1,98 @@
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 9px;
+    max-width: 520px;
+    margin: 0 auto;
+  
+    /*Планшет и выше*/
+    @media (min-width: 768px) {
+        padding: 0;
+        max-width: 467px;
+    }
+  
+    /*Десктоп*/
+    @media (min-width: 1200px) {
+        max-width: 750px;
+    }
+  }
+  
+  .testimonial_text {
+    margin-bottom: -40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+    line-height: 2;
+    text-align: center;
+  
+    p {
+      margin: 0;
+      margin-bottom: 63px;
+    }
+  
+    /*Планшет и выше*/
+    @media (min-width: 768px) {
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 2.13;
+      margin-bottom: -29px;
+    }
+  
+    /*Десктоп*/
+    @media (min-width: 1200px) {
+      margin-bottom: 55px;
+      font-size: 18px;
+      line-height: 2.222;
+  
+    }
+  }
+  
+  .testimonial_user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    /*Планшет и выше*/
+    @media (min-width: 768px) {
+  
+    }
+  
+    /*Десктоп*/
+    @media (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+  
+  .testimonial_user-photo {
+    margin-bottom: 21px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    /*Планшет и выше*/
+    @media (min-width: 768px) {
+  
+    }
+  
+    /*Десктоп*/
+    @media (min-width: 1200px) {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+  
+  .testimonial_user-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+    line-height: 1.3;
+  }

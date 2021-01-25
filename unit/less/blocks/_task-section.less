@@ -1,0 +1,155 @@
+.task-section_wrapper {
+  position: relative;
+  padding-top: 71px;
+  padding-bottom: 45px;
+  background-color: #fff;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    padding-top: 65px;
+    padding-bottom: 40px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    padding-top: 95px;
+    padding-bottom: 18px;
+  }
+}
+
+.task-section_wrapper::before {
+  content: "";
+  position: absolute;
+  background-color: #a4eecb;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 70px;
+  height: 70px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.task-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 150px;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.task-content {
+  width: 320px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 53px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    padding: 18px 0 0 0;
+    width: 377px;
+    margin-bottom: 0;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    padding-top: 0;
+    width: 440px;
+  }
+}
+
+.task-content_title {
+  margin-bottom: 30px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    margin-bottom: 35px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    margin-bottom: 37px;
+  }
+}
+
+.task-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #50e3a4;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+.task-content_header {
+  margin-bottom: 36px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.task-content_benefit {
+  margin-bottom: 65px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.task-img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+
+  img {
+    width: 203px;
+
+    /*Планшет и выше*/
+    @media (min-width: 768px) {
+      width: 270px;
+    }
+
+    /*Десктоп*/
+    @media (min-width: 1200px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.footer {
+  padding-top: 56px;
+  padding-bottom: 60px;
+  background-color: #000000;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    padding-top: 72px;
+    padding-bottom: 75px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    padding-top: 80px;
+    padding-bottom: 65px;
+  }
+}
+
+.footer_row {
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+}
+
+.footer_nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 52px;
+
+  /*Планшет и выше*/
+ @media (min-width: 768px) {
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 51px;
+}
+
+/*Десктоп*/
+@media (min-width: 1200px) {
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+
+}
+
+.nav-content_link {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
+  transition: opacity 0.3s ease-in;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 38px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer_icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+/*Планшет и выше*/
+ @media (min-width: 768px) {
+  margin-bottom: 50px;
+}
+
+/*Десктоп*/
+@media (min-width: 1200px) {
+  margin-bottom: 0;
+}
+}
+
+.footer_icons_link {
+  margin-right: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: opacity 0.3s ease-in;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.copyright p {
+  text-align: center;
+  font-size: 14px;
+  color: #5f5f5f;
+  font-weight: 500;
+  line-height: 1.7;
+  width: 190px;
+  margin-right: auto;
+  margin-left: auto;
+
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    width: auto;
+  }
+  
+}

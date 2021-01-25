@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+  }
+  
+  img {
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    /*background-color: rgb(135, 222, 150);*/
+
+    // Планшет
+    @media (min-width: 780px) {
+        width: 780px;
+      /*background-color: burlywood;*/
+    }
+    
+    // Десктоп
+    @media (min-width: 1160px) {
+        width: 1160px;
+    }
+  }
+
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .section-example {
+    background-color: #eaeaea;
+    height: 150px;
+  }
+  
+  

@@ -21,6 +21,7 @@
   left: 0;
   right: 0;
   z-index: 50;
+  max-width: 100%;
 }
 
 .fix-menu.active {
@@ -308,7 +309,7 @@
   color: #464646;
   transition: 0.3s;
   z-index: 5;
-  
+
   &:hover {
     border: 4px solid #797979;
     color: #797979;
@@ -353,13 +354,13 @@
   transform: scale(1.8);
   margin-top: 43px;
 
-  @media(min-width:425px) {
+  @media (min-width: 425px) {
     transform: scale(1.5);
   }
-  @media(min-width:576px) {
+  @media (min-width: 576px) {
     transform: scale(1.2);
   }
-  @media(min-width:768px) {
+  @media (min-width: 768px) {
     transform: scale(1);
   }
 }

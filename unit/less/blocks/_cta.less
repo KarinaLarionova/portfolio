@@ -1,0 +1,85 @@
+.cta {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  width: 100%;
+  background-color: #4ca17f;
+  background-image: url("../img/cta-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: cover;
+  z-index: 9;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 79px;
+    background-position: center 46%;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    padding-top: 83px;
+    padding-bottom: 90px;
+    background-position: center 10%;
+  }
+}
+
+.cta::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(10, 130, 78, 0.7);
+}
+
+.cta_content {
+  position: relative;
+  text-align: center;
+}
+
+.cta_header {
+  margin-bottom: 38px;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  line-height: 1.36;
+
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+  }
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    margin-bottom: 52px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    margin-bottom: 46px;
+  }
+}
+
+.button.button--cta {
+  background-color: rgb(255, 255, 255);
+  padding: 0 43px;
+  color: #2bb279;
+  transition: box-shadow 0.3s ease;
+  transition: color 0.3s ease;
+  transition: font-size 0.3s ease;
+
+  &:hover {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: darken(#2bb279, 20%);
+    font-size: 16px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

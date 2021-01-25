@@ -1,0 +1,172 @@
+.section-focus {
+  position: relative;
+  padding-top: 71px;
+  padding-bottom: 27px;
+  overflow: hidden;
+  border-top: 1px solid #e1e1e1;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    padding-top: 58px;
+    padding-bottom: 0;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    padding-top: 80px;
+
+  }
+}
+
+.section-focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+  width: 70px;
+  height: 70px;
+  background-color: #a4eecb;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.section-focus_row {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    align-items: center;
+  }
+}
+
+.section-functional_img-wrapper {
+  position: relative;
+  max-width: 470px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    max-width: unset;
+    width: 287px;
+    height: 505px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    height: 731px;
+    width: 470px;
+  }
+}
+
+.section-functional_img {
+  position: static;
+  max-width: 100%;
+  transform: translateX(-4%);
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: unset;
+    height: 519px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    height: 731px;
+  }
+}
+
+.section-functional_content {
+  max-width: 470px;
+  text-align: center;
+  padding-bottom: 50px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    text-align: left;
+    max-width: 410px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    margin-left: auto;
+    max-width: 470px;
+    padding-bottom: 130px;
+
+  }
+}
+
+.focus-content_title {
+  margin-bottom: 30px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    padding-top: 26px;
+    margin-bottom: 35px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.focus-content_header {
+  margin-bottom: 37px;
+
+  /*Планшет и выше*/
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+
+  /*Десктоп*/
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.focus-content_benefit {
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    /*Планшет и выше*/
+    line-height: 1.71;
+    @media (min-width: 768px) {
+      line-height: 2.14;
+    }
+
+    /*Десктоп*/
+    @media (min-width: 1200px) {
+
+    }
+  }
+}
+
