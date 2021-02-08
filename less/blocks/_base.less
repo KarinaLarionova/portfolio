@@ -216,10 +216,16 @@ button {
 
 //навигация прокрутки
 #page-nav {
+    display: none;
+    flex-direction: column;
     position: fixed;
     right: 50px;
     top: 50%;
     z-index: 100;
+
+    @media(min-width:1200px) {
+        display: flex;
+    }
 }
 
 #page-nav li {
@@ -244,10 +250,16 @@ button {
     color: rgb(139, 139, 139);
     position: fixed;
     bottom: 40px;
-    right: 40px;
+    right: 20px;
     font-size: 40px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+
+    @media(min-width:1200px) {
+        right: 40px;
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .fa-angle-double-up:hover {
